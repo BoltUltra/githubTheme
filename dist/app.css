@@ -519,6 +519,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.5rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-36 {
+  margin-right: 9rem;
+}
+
 .block {
   display: block;
 }
