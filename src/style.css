@@ -9,3 +9,11 @@
 .hover {
   @apply hover:border-b hover:border-b-slate-400 hover:transition-all hover:text-slate-400;
 }
+
+.navlink {
+  @apply flex items-center text-[10px];
+}
+
+.svgicon {
+  @apply h-4 w-4 hover:font-bold mr-1;
+}
