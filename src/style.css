@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  @apply border-b border-b-white;
+}
+
+.hover {
+  @apply hover:border-b hover:border-b-slate-400 hover:transition-all hover:text-slate-400;
+}
