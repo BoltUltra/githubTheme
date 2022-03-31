@@ -31,5 +31,9 @@
 }
 
 .box {
-  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-white text-black rounded-full;
+  @apply absolute transition-all hover:scale-[1.05] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-white text-black rounded-full;
+}
+
+.text {
+  @apply text-lg font-bold text-white font-poppins;
 }
