@@ -23,7 +23,7 @@
 }
 
 .circle {
-  @apply h-[150px] w-[150px] border-8 rounded-full relative;
+  @apply h-[150px] w-[150px] rounded-full relative;
 }
 
 .percentage {
@@ -31,7 +31,7 @@
 }
 
 .box {
-  @apply absolute transition-all hover:scale-[1.05] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-white text-black rounded-full;
+  @apply absolute transition-all hover:scale-[0.91] scale-[0.8] bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full text-black rounded-full;
 }
 
 .text {

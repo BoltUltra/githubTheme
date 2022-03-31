@@ -226,30 +226,30 @@
 		<section id="stack" class="mt-5">
 			<div class="grid gap-y-4 text-black">
 				<div class="card">
-					<div class="circle border-html">
+					<div class="circle">
 						<div class="bar"></div>
-						<div class="box"><span class="percentage text-html">80%</span></div>
+						<div class="box"><span class="percentage text-html"></span></div>
 					</div>
 					<div class="text">HTML</div>
 				</div>
 				<div class="card css">
-					<div class="circle border-css">
+					<div class="circle">
 						<div class="bar"></div>
-						<div class="box"><span class="percentage text-css">65%</span></div>
+						<div class="box"><span class="percentage text-css"></span></div>
 					</div>
 					<div class="text">CSS</div>
 				</div>
 				<div class="card tailwind">
-					<div class="circle border-tailwind">
+					<div class="circle">
 						<div class="bar"></div>
-						<div class="box"><span class="percentage text-tailwind">60%</span></div>
+						<div class="box"><span class="percentage text-tailwind"></span></div>
 					</div>
 					<div class="text">TailwindCSS</div>
 				</div>
 				<div class="card js">
-					<div class="circle border-javascript">
+					<div class="circle">
 						<div class="bar"></div>
-						<div class="box"><span class="percentage text-javascript">20%</span></div>
+						<div class="box"><span class="percentage text-javascript"></span></div>
 					</div>
 					<div class="text">JavaScript</div>
 				</div>
@@ -274,6 +274,7 @@
 		}
 
 		$(".circle .bar").circleProgress(options).on('circle-animation-progress', function (event, progress, stepValue) {
+			$(this).parent().find('span').text(String(stepValue.toFixed(2).substr(2)) + '%')
 		});
 		$('.css .bar').circleProgress({
 			value: 0.65,
