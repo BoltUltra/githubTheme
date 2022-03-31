@@ -17,3 +17,19 @@
 .svgicon {
   @apply h-4 w-4 hover:font-bold mr-1;
 }
+
+.card {
+  @apply h-80 rounded bg-background md:bg-navbar flex justify-evenly items-center flex-col;
+}
+
+.circle {
+  @apply h-[150px] w-[150px] border-8 rounded-full relative;
+}
+
+.percentage {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-bold;
+}
+
+.box {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-white text-black rounded-full;
+}

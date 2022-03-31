@@ -15,11 +15,13 @@
 		rel="stylesheet">
 </head>
 
-<body class="md:bg-background bg-navbar font-sans">
+<body class="md:bg-background bg-navbar font-sans" id="body">
 
 	<header class="sticky top-0">
 		<nav
-			class="bg-navbar md:shadow-lg flex justify-between items-center mx-auto px-2 md:px-14 py-3 mt-2 lg:px-24 w-full">
+			class="bg-navbar md:shadow-lg flex justify-between items-center mx-auto px-2 md:px-14 py-3 mt-2 lg:px-24 w-full"
+			id="navbar">
+			<!-- Hambuger Menu -->
 			<div class="md:hidden inline">
 				<button class="mobile-menu-button">
 					<svg class="w-7 h-7 ml-2 mt-1 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -28,10 +30,24 @@
 					</svg>
 				</button>
 			</div>
+
+			<!-- Title -->
 			<div class="uppercase font-semibold text-white md:text-left text-center">
 				<a href="index.html"><span class="md:inline hidden">Mayowa Sunusi</span><span
-						class="md:hidden mr-36 bg-white text-black px-3 py-2 rounded-full w-4 h-4 font-bold hover:bg-background hover:text-white">M</span></a>
+						class="md:hidden bg-white text-black px-3 py-2 rounded-full w-4 h-4 font-bold hover:bg-background hover:text-white">M</span></a>
 			</div>
+
+			<!-- Light and Dark Mode Icon -->
+			<div class="md:hidden inline">
+				<button class="mode-button text-white" id="mode-button" onclick="mode()">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mt-1" viewBox="0 0 20 20" fill="currentColor">
+						<path
+							d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+					</svg>
+				</button>
+			</div>
+
+			<!-- Mobile Menu -->
 			<div class="hidden md:flex space-x-12 items-center text-white">
 				<a href="#" class="active hover tab">Home</a>
 				<a href="#about" class="hover tab">About</a>
@@ -53,7 +69,7 @@
 	</header>
 
 	<main class="mx-4 text-sm text-slate-200">
-		<section class="">
+		<section class="" id="prile-card">
 			<div class="flex items-center">
 				<div>
 					<img src="./assets/image.png" alt="" class="w-12 rounded-full mr-5">
@@ -64,7 +80,9 @@
 				</div>
 			</div>
 		</section>
-		<section>
+
+
+		<section id="#portfolio-nav">
 			<ul class="flex items-center text-center justify-around mt-3">
 				<li>
 					<a href="" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon" fill="none"
@@ -96,7 +114,9 @@
 				</li>
 			</ul>
 		</section>
-		<section>
+
+
+		<section id="#overview">
 			<div class="border rounded-lg p-3 px-6 text-sm mt-5">
 				<h3 class="font-mono text-xs mb-3">BoltUltra/README.md</h3>
 				<div class="space-y-2">
@@ -118,7 +138,9 @@
 				</div>
 			</div>
 		</section>
-		<section>
+
+
+		<section id="#projects">
 			<div>
 				<div class="mt-5">
 					<h3 class="font-semibold">My Projects</h3>
@@ -128,16 +150,16 @@
 							<span class="text-xs text-slate-400">This is a landing page for a mobile app</span>
 							<div class="flex space-x-2 text-[10px]">
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#e34c26] w-2 h-2 rounded-full"></div><span>HTML</span>
+									<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#264de4] w-2 h-2 rounded-full"></div><span>CSS</span>
+									<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#6079da] w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
+									<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#F0DB4F] w-2 h-2 rounded-full"></div><span>JavaScript</span>
+									<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
 								</div>
 							</div>
 						</div>
@@ -146,16 +168,16 @@
 							<span class="text-xs text-slate-400">A photography Website</span>
 							<div class="flex space-x-2 text-[10px]">
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#e34c26] w-2 h-2 rounded-full"></div><span>HTML</span>
+									<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#264de4] w-2 h-2 rounded-full"></div><span>CSS</span>
+									<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#6079da] w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
+									<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#F0DB4F] w-2 h-2 rounded-full"></div><span>JavaScript</span>
+									<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
 								</div>
 							</div>
 						</div>
@@ -164,10 +186,10 @@
 							<span class="text-xs text-slate-400">A music website for DJ's</span>
 							<div class="flex space-x-2 text-[10px]">
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#e34c26] w-2 h-2 rounded-full"></div><span>HTML</span>
+									<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#264de4] w-2 h-2 rounded-full"></div><span>CSS</span>
+									<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
 								</div>
 								<div class="flex items-center space-x-1">
 									<div class="bg-[#602c50] w-2 h-2 rounded-full"></div><span>Bootstrap</span>
@@ -180,22 +202,55 @@
 							<span class="text-xs text-slate-400">This is a landing page for Yoga Registration</span>
 							<div class="flex space-x-2 text-[10px]">
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#e34c26] w-2 h-2 rounded-full"></div><span>HTML</span>
+									<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#264de4] w-2 h-2 rounded-full"></div><span>CSS</span>
+									<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#6079da] w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
+									<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
 								</div>
 								<div class="flex items-center space-x-1">
-									<div class="bg-[#F0DB4F] w-2 h-2 rounded-full"></div><span>JavaScript</span>
+									<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			</div>
+		</section>
+
+		<section id="stack" class="mt-5">
+			<div class="grid gap-y-4 text-black">
+				<div class="card">
+					<div class="circle border-html">
+						<div class="bar"></div>
+						<div class="box"><span class="percentage text-html">80%</span></div>
+					</div>
+					<div class="text">HTML</div>
+				</div>
+				<div class="card">
+					<div class="circle border-css">
+						<div class="bar"></div>
+						<div class="box"><span class="percentage text-css">80%</span></div>
+					</div>
+					<div class="text">CSS</div>
+				</div>
+				<div class="card">
+					<div class="circle border-tailwind">
+						<div class="bar"></div>
+						<div class="box"><span class="percentage text-tailwind">80%</span></div>
+					</div>
+					<div class="text">TailwindCSS</div>
+				</div>
+				<div class="card">
+					<div class="circle border-javascript">
+						<div class="bar"></div>
+						<div class="box"><span class="percentage text-javascript">80%</span></div>
+					</div>
+					<div class="text">JavaScript</div>
+				</div>
 			</div>
 		</section>
 	</main>
