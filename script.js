@@ -17,6 +17,7 @@ for (let i = 0; i < tab.length; i++) {
   tab[i].className = tab[i].className.replace("active", "");
 }
 
+// Dark Mode and Light Mode
 let modeButton = document.getElementById("mode-button");
 let body = document.getElementById("body");
 let navbar = document.getElementById("navbar");
@@ -31,4 +32,38 @@ function mode() {
     body.classList.replace("bg-white", "bg-navbar");
     navbar.classList.replace("bg-white", "bg-navbar");
   }
+}
+
+// Portfolio navigation
+let overview = document.getElementById("overview");
+let all = document.getElementById("all");
+let project = document.getElementById("projects");
+let stack = document.getElementById("stack");
+let contactEl = document.getElementById("contact");
+
+function home() {
+  overview.classList.remove("hidden");
+  project.classList.remove("hidden");
+  stack.classList.remove("hidden");
+  contactEl.classList.remove("hidden");
+}
+
+function projects() {
+  overview.classList.add("hidden");
+  stack.classList.add("hidden");
+  project.classList.remove("hidden");
+  contactEl.classList.add("hidden");
+}
+function skill() {
+  overview.classList.add("hidden");
+  stack.classList.remove("hidden");
+  contactEl.classList.add("hidden");
+  project.classList.add("hidden");
+}
+
+function contact() {
+  overview.classList.add("hidden");
+  stack.classList.add("hidden");
+  contactEl.classList.remove("hidden");
+  project.classList.add("hidden");
 }

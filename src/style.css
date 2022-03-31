@@ -11,7 +11,7 @@
 }
 
 .navlink {
-  @apply flex items-center text-[10px];
+  @apply flex items-center text-[10px] cursor-pointer;
 }
 
 .svgicon {
