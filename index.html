@@ -18,13 +18,12 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
 
-<body class="md:bg-background bg-navbar font-sans" id="body">
+<body class="md:bg-background bg-navbar font-sans scroll-smooth" id="body">
 
 	<header class="sticky top-0 z-10">
 		<nav
 			class="bg-navbar md:shadow-lg flex justify-between items-center mx-auto px-2 md:px-14 py-3 mt-2 lg:px-24 w-full"
 			id="navbar">
-			<!-- Hambuger Menu -->
 			<div class="md:hidden inline">
 				<button class="mobile-menu-button">
 					<svg class="w-7 h-7 ml-2 mt-1 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -50,231 +49,241 @@
 				</button>
 			</div>
 
-			<!-- Mobile Menu -->
 			<div class="hidden md:flex space-x-12 items-center text-white">
 				<a href="#" class="active hover tab">Home</a>
-				<a href="#about" class="hover tab">About</a>
-				<a href="#projects" class="hover tab">Projects</a>
-				<a href="#skills" class="hover tab">Skills</a>
+				<a href="#projects" class="hover tab">Project</a>
+				<a href="#stack" class="hover tab">Stack</a>
 				<a href="#contact" class="hover tab">Contact </a>
 			</div>
 			<!-- Mobile button -->
-
-			<!-- Mobile menu -->
+			<div class="md:block hidden">
+				<button class="mode-button text-white" id="mode-button" onclick="mode()">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mt-1" viewBox="0 0 20 20" fill="currentColor">
+						<path
+							d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+					</svg>
+				</button>
+			</div>
 		</nav>
+		<!-- Mobile menu -->
 		<div class="mobile-menu hidden md:hidden text-white bg-navbar">
-			<a href="#about" class="block py-2 mx-4 text-sm border-t border-t-slate-600 hover-bg-background">About</a>
 			<a href="#projects" class="block py-2 mx-4 text-sm border-t border-t-slate-600 hover-bg-background">Projects</a>
-			<a href="#skills" class="block py-2 mx-4 text-sm border-t border-t-slate-600 hover-bg-background">Skills</a>
+			<a href="#stack" class="block py-2 mx-4 text-sm border-t border-t-slate-600 hover-bg-background">Stack</a>
 			<a href="#contact" class="block py-2 mx-4 text-sm border-t border-t-slate-600 hover-bg-background">Contact
 			</a>
+
 		</div>
 	</header>
 
 	<main class="mx-4 text-sm text-slate-200">
-		<section class="" id="profile-card">
-			<div class="flex items-center">
-				<div>
-					<img src="./assets/image.png" alt="" class="w-12 rounded-full mr-5">
-				</div>
-				<div class="py-4">
-					<h2 class="font-semibold font-sans text-2xl -mb-1">Mayowa.js 💛</h2>
-					<span class="font-extralight text-lg text-slate-500">BoltUltra</span>
+		<div class="md:flex md:mt-10">
+			<div class="md:w-[30%]">
+				<section class="" id="profile-card">
+					<div class="flex md:flex-col items-center">
+						<div>
+							<img src="./assets/image.png" alt="" class="w-12 md:w-64 rounded-full mr-5">
+						</div>
+						<div class="py-4 md:place-self-start md:ml-10 md:mt-5">
+							<h2 class="font-semibold font-sans text-2xl -mb-1">Mayowa.js 💛</h2>
+							<span class="font-extralight text-lg text-slate-500">BoltUltra</span>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="md:w-[70%]">
+				<section id="#portfolio-nav" class="">
+					<ul class="flex items-center text-center justify-around mt-3 md:border-b md:border-b-slate-400 md:pb-3">
+						<li>
+							<a onclick="home()" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon" fill="none"
+									viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+								</svg> <span class="">Overview</span></a>
+						</li>
+						<li>
+							<a onclick="projects()" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon"
+									fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+								</svg> <span class="">Projects</span></a>
+						</li>
+						<li>
+							<a onclick="skill()" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon" fill="none"
+									viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+								</svg> <span class="">Stack</span></a>
+						</li>
+						<li>
+							<a onclick="contact()" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon" fill="none"
+									viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+									<path stroke-linecap="round" stroke-linejoin="round"
+										d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+								</svg> <span class="">Contact</span></a>
+						</li>
+					</ul>
+				</section>
+
+				<div id="all">
+					<section id="overview" class="my-5">
+						<div class="border rounded-lg p-3 px-6 text-sm mt-5">
+							<h3 class="font-mono text-xs mb-3">BoltUltra/README.md</h3>
+							<div class="space-y-2">
+								<span class="flex">
+									<li></li>👋 Hi, I'm Mayowa
+								</span>
+								<span class="flex">
+									<li></li>👀 I’m interested in Web Development
+								</span>
+								<span class="flex">
+									<li></li>🌱 I’m currently learning JavaScript
+								</span>
+								<span class="flex">
+									<li></li>💞️ I’m looking to collaborate on Web Projects
+								</span>
+								<span class="flex">
+									<li></li>📫 How to reach me mayowa.u.sunusi@gmail.com
+								</span>
+							</div>
+						</div>
+					</section>
+
+					<section id="projects" class="my-5">
+						<div>
+							<div class="mt-5">
+								<h3 class="font-semibold">My Projects</h3>
+								<div class="space-y-4 md:space-y-0 md:gap-4 md:grid md:grid-cols-2">
+									<div class="border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3">
+										<h4 class="font-semibold"><a href="" aria-valuetext="TechFin App Page">TechFin App Page</a></h4>
+										<span class="text-xs text-slate-400">This is a landing page for a mobile app</span>
+										<div class="flex space-x-2 md:space-x-3 text-[10px] md:text-[12px]">
+											<div class="flex items-center space-x-1">
+												<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
+											</div>
+										</div>
+									</div>
+									<div class="border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3">
+										<h4 class="font-semibold"><a href="">Kaz Empire</a></h4>
+										<span class="text-xs text-slate-400">A photography Website</span>
+										<div class="flex space-x-2 md:space-x-3 text-[10px] md:text-[12px]">
+											<div class="flex items-center space-x-1">
+												<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
+											</div>
+										</div>
+									</div>
+									<div class="border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3">
+										<h4 class="font-semibold"><a href="" aria-valuetext="TechFin App Page">Audio Blog</a></h4>
+										<span class="text-xs text-slate-400">A music website for DJ's</span>
+										<div class="flex space-x-2 md:space-x-3 text-[10px] md:text-[12px]">
+											<div class="flex items-center space-x-1">
+												<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-[#602c50] w-2 h-2 rounded-full"></div><span>Bootstrap</span>
+											</div>
+										</div>
+									</div>
+									<div class="border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3">
+										<h4 class="font-semibold"><a href="" aria-valuetext="TechFin App Page">Yoga Training Registration
+												Page</a>
+										</h4>
+										<span class="text-xs text-slate-400">This is a landing page for Yoga Registration</span>
+										<div class="flex space-x-2 md:space-x-3 text-[10px] md:text-[12px]">
+											<div class="flex items-center space-x-1">
+												<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
+											</div>
+											<div class="flex items-center space-x-1">
+												<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section id="stack" class="my-5">
+						<h3 class="py-3 font-semibold">Stack/Skills</h3>
+						<div class="grid md:grid-cols-2 gap-4 text-black">
+							<div class="card">
+								<div class="circle">
+									<div class="bar"></div>
+									<div class="box"><span class="percentage text-html"></span></div>
+								</div>
+								<div class="text">HTML</div>
+							</div>
+							<div class="card css">
+								<div class="circle">
+									<div class="bar"></div>
+									<div class="box"><span class="percentage text-css"></span></div>
+								</div>
+								<div class="text">CSS</div>
+							</div>
+							<div class="card tailwind">
+								<div class="circle">
+									<div class="bar"></div>
+									<div class="box"><span class="percentage text-tailwind"></span></div>
+								</div>
+								<div class="text">TailwindCSS</div>
+							</div>
+							<div class="card js">
+								<div class="circle">
+									<div class="bar"></div>
+									<div class="box"><span class="percentage text-javascript"></span></div>
+								</div>
+								<div class="text">JavaScript</div>
+							</div>
+						</div>
+					</section>
+
+					<section id="contact" class="my-5">
+						<div class="my-6 text-center">
+							<!-- <h3 class="py-3 font-semibold">Contact</h3> -->
+							<div class="icons text-center space-x-4">
+								<a href="" class="hover:text-black"><i class="fab fa-github fa-xl"></i></a>
+								<a href="" class="hover:text-css"><i class="fab fa-twitter fa-xl"></i></a>
+								<a href="" class="hover:text-html"><i class="fab fa-dribbble fa-xl"></i></a>
+								<a href="" class="hover:text-javascript"><i class="fas fa-phone-alt fa-xl"></i></a>
+								<a href="" class="hover:text-tailwind"><i class="fas fa-envelope fa-xl"></i></a>
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
-		</section>
-
-
-		<section id="#portfolio-nav" class="">
-			<ul class="flex items-center text-center justify-around mt-3">
-				<li>
-					<a onclick="home()" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon" fill="none"
-							viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-							<path stroke-linecap="round" stroke-linejoin="round"
-								d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-						</svg> <span class="">Overview</span></a>
-				</li>
-				<li>
-					<a onclick="projects()" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon" fill="none"
-							viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-							<path stroke-linecap="round" stroke-linejoin="round"
-								d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-						</svg> <span class="">Projects</span></a>
-				</li>
-				<li>
-					<a onclick="skill()" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon" fill="none"
-							viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-							<path stroke-linecap="round" stroke-linejoin="round"
-								d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-						</svg> <span class="">Stack</span></a>
-				</li>
-				<li>
-					<a onclick="contact()" class="navlink"><svg xmlns="http://www.w3.org/2000/svg" class="svgicon" fill="none"
-							viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-							<path stroke-linecap="round" stroke-linejoin="round"
-								d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-						</svg> <span class="">Contact</span></a>
-				</li>
-			</ul>
-		</section>
-
-		<div id="all">
-			<section id="overview" class="">
-				<div class="border rounded-lg p-3 px-6 text-sm mt-5">
-					<h3 class="font-mono text-xs mb-3">BoltUltra/README.md</h3>
-					<div class="space-y-2">
-						<span class="flex">
-							<li></li>👋 Hi, I'm Mayowa
-						</span>
-						<span class="flex">
-							<li></li>👀 I’m interested in Web Development
-						</span>
-						<span class="flex">
-							<li></li>🌱 I’m currently learning JavaScript
-						</span>
-						<span class="flex">
-							<li></li>💞️ I’m looking to collaborate on Web Projects
-						</span>
-						<span class="flex">
-							<li></li>📫 How to reach me mayowa.u.sunusi@gmail.com
-						</span>
-					</div>
-				</div>
-			</section>
-
-			<section id="projects" class="">
-				<div>
-					<div class="mt-5">
-						<h3 class="font-semibold">My Projects</h3>
-						<div class="space-y-4">
-							<div class="border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3">
-								<h4 class="font-semibold"><a href="" aria-valuetext="TechFin App Page">TechFin App Page</a></h4>
-								<span class="text-xs text-slate-400">This is a landing page for a mobile app</span>
-								<div class="flex space-x-2 text-[10px]">
-									<div class="flex items-center space-x-1">
-										<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
-									</div>
-								</div>
-							</div>
-							<div class="border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3">
-								<h4 class="font-semibold"><a href="" aria-valuetext="TechFin App Page">Kaz Empire</a></h4>
-								<span class="text-xs text-slate-400">A photography Website</span>
-								<div class="flex space-x-2 text-[10px]">
-									<div class="flex items-center space-x-1">
-										<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
-									</div>
-								</div>
-							</div>
-							<div class="border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3">
-								<h4 class="font-semibold"><a href="" aria-valuetext="TechFin App Page">Audio Blog</a></h4>
-								<span class="text-xs text-slate-400">A music website for DJ's</span>
-								<div class="flex space-x-2 text-[10px]">
-									<div class="flex items-center space-x-1">
-										<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-[#602c50] w-2 h-2 rounded-full"></div><span>Bootstrap</span>
-									</div>
-								</div>
-							</div>
-							<div class="border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3">
-								<h4 class="font-semibold"><a href="" aria-valuetext="TechFin App Page">Yoga Training Registration
-										Page</a>
-								</h4>
-								<span class="text-xs text-slate-400">This is a landing page for Yoga Registration</span>
-								<div class="flex space-x-2 text-[10px]">
-									<div class="flex items-center space-x-1">
-										<div class="bg-html w-2 h-2 rounded-full"></div><span>HTML</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-css w-2 h-2 rounded-full"></div><span>CSS</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-tailwind w-2 h-2 rounded-full"></div><span>TailwindCSS</span>
-									</div>
-									<div class="flex items-center space-x-1">
-										<div class="bg-javascript w-2 h-2 rounded-full"></div><span>JavaScript</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="stack" class="mt-5">
-				<h3 class="py-3 font-semibold">Stack/Skills</h3>
-				<div class="grid gap-y-4 text-black">
-					<div class="card">
-						<div class="circle">
-							<div class="bar"></div>
-							<div class="box"><span class="percentage text-html"></span></div>
-						</div>
-						<div class="text">HTML</div>
-					</div>
-					<div class="card css">
-						<div class="circle">
-							<div class="bar"></div>
-							<div class="box"><span class="percentage text-css"></span></div>
-						</div>
-						<div class="text">CSS</div>
-					</div>
-					<div class="card tailwind">
-						<div class="circle">
-							<div class="bar"></div>
-							<div class="box"><span class="percentage text-tailwind"></span></div>
-						</div>
-						<div class="text">TailwindCSS</div>
-					</div>
-					<div class="card js">
-						<div class="circle">
-							<div class="bar"></div>
-							<div class="box"><span class="percentage text-javascript"></span></div>
-						</div>
-						<div class="text">JavaScript</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="contact" class="">
-				<div class="my-6 text-center">
-					<!-- <h3 class="py-3 font-semibold">Contact</h3> -->
-					<div class="icons text-center space-x-4">
-						<a href="" class="hover:text-black"><i class="fab fa-github fa-xl"></i></a>
-						<a href="" class="hover:text-css"><i class="fab fa-twitter fa-xl"></i></a>
-						<a href="" class="hover:text-html"><i class="fab fa-dribbble fa-xl"></i></a>
-						<a href="" class="hover:text-javascript"><i class="fas fa-phone-alt fa-xl"></i></a>
-						<a href="" class="hover:text-tailwind"><i class="fas fa-envelope fa-xl"></i></a>
-					</div>
-				</div>
-			</section>
 		</div>
 
 	</main>
 
 	<footer class="py-3 text-slate-500 text-xs font-extralight text-center border-y">
-		Made with 💛 with TailwindCSS
+		Made with 💛 and TailwindCSS
 	</footer>
 
 
@@ -289,7 +298,7 @@
 		let options = {
 			startAngle: -1.55,
 			size: 150,
-			value: 0.80,
+			value: 0.90,
 			fill: { gradient: ['#e34c26', '#161B22', '#556077'] }
 		}
 
@@ -297,13 +306,13 @@
 			$(this).parent().find('span').text(String(stepValue.toFixed(2).substr(2)) + '%')
 		});
 		$('.css .bar').circleProgress({
-			value: 0.65,
+			value: 0.70,
 		});
 		$('.tailwind .bar').circleProgress({
-			value: 0.60,
+			value: 0.75,
 		});
 		$('.js .bar').circleProgress({
-			value: 0.20,
+			value: 0.21,
 		});
 	</script>
 
