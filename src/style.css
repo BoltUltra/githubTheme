@@ -11,7 +11,7 @@
 }
 
 .navlink {
-  @apply flex items-center text-[10px] md:text-sm cursor-pointer;
+  @apply flex items-center text-[10px] md:text-sm cursor-pointer md:py-3 hover:border-b-html hover:border-b;
 }
 
 .svgicon {
@@ -20,6 +20,10 @@
 
 .card {
   @apply h-80 rounded bg-background md:bg-navbar flex justify-evenly items-center flex-col;
+}
+
+.project-card {
+  @apply border border-slate-500 rounded-lg px-4 py-4 space-y-5 text-sm mt-3;
 }
 
 .circle {

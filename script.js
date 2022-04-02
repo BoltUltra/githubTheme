@@ -7,15 +7,40 @@ btn.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 });
 
-let tab = document.querySelectorAll(".tab");
+// NavBar Active States
 
-for (let i = 0; i < tab.length; i++) {
-  tab[i].addEventListener("click", function (e) {
-    e.currentTarget.classList.add("active");
-  });
+let homeTab = document.querySelector(".home-tab");
+let projectTab = document.querySelector(".project-tab");
+let stackTab = document.querySelector(".stack-tab");
+let contactTab = document.querySelector(".contact-tab");
 
-  tab[i].className = tab[i].className.replace("active", "");
-}
+homeTab.addEventListener("click", () => {
+  homeTab.classList.add("active");
+  projectTab.classList.remove("active");
+  stackTab.classList.remove("active");
+  contactTab.classList.remove("active");
+});
+
+projectTab.addEventListener("click", () => {
+  homeTab.classList.remove("active");
+  projectTab.classList.add("active");
+  stackTab.classList.remove("active");
+  contactTab.classList.remove("active");
+});
+
+stackTab.addEventListener("click", () => {
+  homeTab.classList.remove("active");
+  projectTab.classList.remove("active");
+  stackTab.classList.add("active");
+  contactTab.classList.remove("active");
+});
+
+contactTab.addEventListener("click", () => {
+  homeTab.classList.remove("active");
+  projectTab.classList.remove("active");
+  stackTab.classList.remove("active");
+  contactTab.classList.add("active");
+});
 
 // Dark Mode and Light Mode
 let modeButton = document.getElementById("mode-button");
