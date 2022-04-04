@@ -43,17 +43,27 @@ contactTab.addEventListener("click", () => {
 });
 
 // Dark Mode and Light Mode
-let modeButton = document.getElementById("mode-button");
+let modeButtonD = document.querySelector(".mode-button-desktop");
+let modeButtonM = document.querySelector(".mode-button-mobile");
 let body = document.getElementById("body");
 let navbar = document.getElementById("navbar");
 
 function mode() {
-  if (modeButton.classList.contains("text-white")) {
-    modeButton.classList.replace("text-white", "text-black");
+  if (
+    modeButtonD.classList.contains("text-white") ||
+    modeButtonM.classList.contains("text-white")
+  ) {
+    modeButtonM.classList.replace("text-white", "text-black");
+    modeButtonD.classList.replace("text-white", "text-black");
     body.classList.replace("bg-navbar", "bg-white");
+    navbar.classList.add("text-primary");
     navbar.classList.replace("bg-navbar", "bg-white");
-  } else if (modeButton.classList.contains("text-black")) {
-    modeButton.classList.replace("text-black", "text-white");
+  } else if (
+    modeButtonD.classList.contains("text-black") ||
+    modeButtonM.classList.contains("text-black")
+  ) {
+    modeButtonM.classList.replace("text-black", "text-white");
+    modeButtonD.classList.replace("text-black", "text-white");
     body.classList.replace("bg-white", "bg-navbar");
     navbar.classList.replace("bg-white", "bg-navbar");
   }

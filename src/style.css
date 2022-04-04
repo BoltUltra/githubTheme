@@ -11,7 +11,7 @@
 }
 
 .navlink {
-  @apply flex items-center text-[10px] md:text-sm cursor-pointer md:py-3 hover:border-b-html hover:border-b;
+  @apply flex items-center text-[10px] md:text-sm cursor-pointer md:py-3;
 }
 
 .svgicon {
